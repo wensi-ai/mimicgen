@@ -50,7 +50,7 @@ class DataGenerator(object):
         # demonstration keys to use from hdf5 as source dataset
         if demo_keys is None:
             # get all demonstration keys from file
-            demo_keys = MG_FileUtils.get_all_demos_from_dataset(dataset_path=self.dataset)
+            demo_keys = MG_FileUtils.get_all_demos_from_dataset(dataset_path=self.dataset_path)
         self.demo_keys = demo_keys
 
         # parse source dataset
