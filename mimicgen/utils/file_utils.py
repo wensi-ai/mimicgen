@@ -187,7 +187,7 @@ def parse_source_dataset(
             subtask_term_signal = subtask_term_signals[subtask_ind]
             if subtask_term_signal is None:
                 # final subtask, finishes at end of demo
-                subtask_term_ind = ep_grp["actions"].shape[0]
+                subtask_term_ind = ep_grp["actions"].shape[0] if "actions" in ep_grp else ep_grp["action"].shape[0]
             else:
                 # detect indices where 0 -> 1 transition occurs - this will be the end of the subtask
                 subtask_indicators = ep_datagen_info_obj.subtask_term_signals[subtask_term_signal]
